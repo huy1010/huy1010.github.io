@@ -1,0 +1,113 @@
+[
+{
+	"uri": "/",
+	"title": "ECS ECR Workshop",
+	"tags": [],
+	"description": "",
+	"content": "Làm việc với ECS - ECR Tổng quan Trong bài lab này, bạn sẽ tìm hiểu các khái niệm cơ bản và thực hành về ECS - ECR. Thực hành tạo các services chạy task trong các private subnets và gắn load balancing cho ECS.\nNội dung Giới thiệu Các bước chuẩn bị Build và push image lên ECR Tạo Cluster và Task definition Tạo ALB và target groups Tạo Services Dọn dẹp tài nguyên "
+},
+{
+	"uri": "/1-introduce/",
+	"title": "Giới thiệu",
+	"tags": [],
+	"description": "",
+	"content": "Amazon Elastic Container Service (ECS) Amazon Elastic Container Service (Amazon ECS), theo định nghĩa của AWS là một dịch vụ quản lý container có khả năng mở rộng cao, dễ dàng run, stop, hay quản lý docker container ở trong một cluster. Bạn có thể host một serverless infrastructure bằng cách chạy service hay task sử dụng Fargate launch type hoặc sử dụng EC2 launch type để chạy các EC2 instance. ECS chạy các container trong cluster dựa trên các EC2 được cài sẵn Docker. Bạn có thể dễ dàng quản lý các container của mình thông qua Cluster. ECS là một dịch vụ chạy theo region, và nó hoạt động trong VPC. Sau khi một cluster được khởi tạo và chạy, bạn có thể định nghĩa các task và services mà nó chỉ định Docker container image sẽ chạy thông qua clusters. ECS có hai dạng được triển khai là chạy trên các EC2 và serverless(fargate).\nCác thành phần khác Task definition Task definition là một bản thiết kế cho ứng dụng của bạn. Nó sẽ định nghĩa image nào được chạy trong container, giới hạn sử dụng CPU và bộ nhớ cho mỗi container được chạy. Lựa chọn các mode networking của Docker có trên AWS ECS và port.\nTask Mỗi một Task tương ứng với mỗi bản Task definition được chạy trên cluster. Nhiều task có thể được chạy bởi cùng một Task definition. Với mỗi một task sử dụng Fargate launch type có một ranh giới riêng biệt và không chia sẻ kernel, tài nguyên cpu, bộ nhớ, hay elastic network interface với task khác.\nService Xác định mức tối thiểu và tối đa của một hoặc nhiều Task từ một Task Definition chạy tại bất kỳ thời điểm nhất định nào. Đây là tính năng scale và cân bằng tải. Service còn quy định việc các task được chạy ở đâu ở các subnets.\n"
+},
+{
+	"uri": "/2-prerequiste/2.1-create-vpc/",
+	"title": "Khởi Tạo VPC",
+	"tags": [],
+	"description": "",
+	"content": "KHỞI TẠO AWS VPC với CloudFormation Template Trong phần này chúng ta sẽ khởi tjao VPC thông qua Cloud Formation bằng cái tải lên file yml đã cấu hình sẵn theo link sau.\nTruy cập đến CloudFormation Management Conole bằng cách gõ CloudFormation vào thanh tìm kiếm "
+},
+{
+	"uri": "/5-create-alb-and-target-groups/5.1-create-alb/",
+	"title": "Tạo ALB",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/4-create-cluster-and-task-definition/4.1-create-cluster/",
+	"title": "Tạo Cluster",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/2-prerequiste/",
+	"title": "Các bước chuẩn bị",
+	"tags": [],
+	"description": "",
+	"content": "\rChúng ta sẽ khởi tạo 1 VPC với 2 public subnets, 2 private subnets, 1 internet gateway, default route cho các public subnets. 2 NAT gateway cho các private subnets. NAT gateway sẽ tốn phí nên cần xóa khi không sử dụng nữa.\nĐể tìm hiểu cách tạo VPC với public/private subnet các bạn có thể tham khảo bài lab :\nLàm việc với Amazon VPC Ở phần này chúng ta sẽ khởi tạo môi trường mạng để cho các service trong cluster cũng như load balancer được hoạt động. Dưới đây là kết quả sau khi tạo VPC và nơi các ECS được hoạt động. Nội dung Chuẩn bị VPC Tạo thêm các security groups "
+},
+{
+	"uri": "/2-prerequiste/2.2-create-security-group/",
+	"title": "Tạo Security groups",
+	"tags": [],
+	"description": "",
+	"content": "Tạo Sercurity groups "
+},
+{
+	"uri": "/5-create-alb-and-target-groups/5.2-create-target-groups/",
+	"title": "Tạo Target groups",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/4-create-cluster-and-task-definition/4.2-create-task-definition/",
+	"title": "Tạo Task Definition",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/3-push-image-to-ecr/",
+	"title": "Build và Push image lên ECR",
+	"tags": [],
+	"description": "",
+	"content": " "
+},
+{
+	"uri": "/4-create-cluster-and-task-definition/",
+	"title": "Tạo Cluster và Task Definition",
+	"tags": [],
+	"description": "",
+	"content": "Trong bước này, chúng ta sẽ thực hiện tạo kết nối đến các máy chủ EC2 của chúng ta, nằm trong cả public và private subnet.\nNội dung Tạo Cluster Tạo Task Definition "
+},
+{
+	"uri": "/5-create-alb-and-target-groups/",
+	"title": "Tạo ALB và Target groups",
+	"tags": [],
+	"description": "",
+	"content": "Trong bước này, chúng ta sẽ thực hiện tạo kết nối đến các máy chủ EC2 của chúng ta, nằm trong cả public và private subnet.\nNội dung Tạo ALB Tạo Target Groups "
+},
+{
+	"uri": "/6-create-services/",
+	"title": "Tạo các services",
+	"tags": [],
+	"description": "",
+	"content": "Trong bước này, chúng ta sẽ thực hiện tạo kết nối đến các máy chủ EC2 của chúng ta, nằm trong cả public và private subnet.\n"
+},
+{
+	"uri": "/7-cleanup-resources/",
+	"title": "Dọn dẹp tài nguyên",
+	"tags": [],
+	"description": "",
+	"content": "Trong bước này, chúng ta sẽ thực hiện tạo kết nối đến các máy chủ EC2 của chúng ta, nằm trong cả public và private subnet.\n"
+},
+{
+	"uri": "/categories/",
+	"title": "Categories",
+	"tags": [],
+	"description": "",
+	"content": ""
+},
+{
+	"uri": "/tags/",
+	"title": "Tags",
+	"tags": [],
+	"description": "",
+	"content": ""
+}]
