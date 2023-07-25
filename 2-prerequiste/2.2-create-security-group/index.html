@@ -12,21 +12,21 @@
     <title>Tạo Security groups :: AWS ECS</title>
 
     
-    <link href="/css/nucleus.css?1690127207" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1690127207" rel="stylesheet">
-    <link href="/css/hybrid.css?1690127207" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1690127207" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1690127207" rel="stylesheet">
-    <link href="/css/auto-complete.css?1690127207" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1690127207" rel="stylesheet">
-    <link href="/css/theme.css?1690127207" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1690127207" rel="stylesheet">
+    <link href="/css/nucleus.css?1690269562" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1690269562" rel="stylesheet">
+    <link href="/css/hybrid.css?1690269562" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1690269562" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1690269562" rel="stylesheet">
+    <link href="/css/auto-complete.css?1690269562" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1690269562" rel="stylesheet">
+    <link href="/css/theme.css?1690269562" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1690269562" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1690127207" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1690269562" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1690127207"></script>
+    <script src="/js/jquery-3.3.1.min.js?1690269562"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1690127207"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1690127207"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1690269562"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1690269562"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1690127207"></script>
+<script type="text/javascript" src="/js/search.js?1690269562"></script>
 
     
   </div>
@@ -353,13 +353,13 @@
  
   
     
-    <li data-nav-id="/5-create-alb-and-target-groups/5.1-create-alb/" title="Tạo ALB" class="dd-item 
+    <li data-nav-id="/5-create-alb-and-target-groups/5.1-create-target-groups/" title="Tạo Target groups" class="dd-item 
         
         
         
         ">
-      <a href="/5-create-alb-and-target-groups/5.1-create-alb/">
-           <b> 5.1 </b> Tạo ALB
+      <a href="/5-create-alb-and-target-groups/5.1-create-target-groups/">
+           <b> 5.1 </b> Tạo Target groups
           
             <i class="fas fa-check read-icon"></i>
           
@@ -381,13 +381,13 @@
  
   
     
-    <li data-nav-id="/5-create-alb-and-target-groups/5.2-create-target-groups/" title="Tạo Target groups" class="dd-item 
+    <li data-nav-id="/5-create-alb-and-target-groups/5.2-create-alb/" title="Tạo Application Load Balancer" class="dd-item 
         
         
         
         ">
-      <a href="/5-create-alb-and-target-groups/5.2-create-target-groups/">
-           <b> 5.2 </b> Tạo Target groups
+      <a href="/5-create-alb-and-target-groups/5.2-create-alb/">
+           <b> 5.2 </b> Tạo Application Load Balancer
           
             <i class="fas fa-check read-icon"></i>
           
@@ -416,18 +416,86 @@
  
   
     
-    <li data-nav-id="/6-create-services/" title="Tạo các services" class="dd-item 
+    <li data-nav-id="/6-create-services/" title="Tạo các services và kiểm tra" class="dd-item 
         
         
         
         ">
       <a href="/6-create-services/">
-           <b> 6. </b> Tạo các services
+           <b> 6. </b> Tạo các services và kiểm tra
           
             <i class="fas fa-check read-icon"></i>
           
       </a>
       
+      
+        <ul>
+          
+          
+            
+          
+          
+          
+        
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/6-create-services/6.1-create-services/" title="Tạo các services" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/6-create-services/6.1-create-services/">
+           <b> 6.1 </b> Tạo các services
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+            
+            
+
+
+
+
+ 
+  
+    
+    <li data-nav-id="/6-create-services/6.2-testing/" title="Kiểm tra" class="dd-item 
+        
+        
+        
+        ">
+      <a href="/6-create-services/6.2-testing/">
+           <b> 6.2 </b> Kiểm tra
+          
+            <i class="fas fa-check read-icon"></i>
+          
+      </a>
+      
+              
+    </li>
+  
+ 
+
+            
+          
+        
+        </ul>
               
     </li>
   
@@ -631,11 +699,42 @@
 
 
 
-	<h4 id="tạo-sercurity-groups">Tạo Sercurity groups</h4>
-<p><img src="/images/2-prerequiste/2.1-create-security-group/001.png" alt="Cloud Formation">
-<img src="/images/2-prerequiste/2.1-create-security-group/002.png" alt="Cloud Formation">
-<img src="/images/2-prerequiste/2.1-create-security-group/003.png" alt="Cloud Formation">
-<img src="/images/2-prerequiste/2.1-create-security-group/004.png" alt="Cloud Formation"></p>
+	<h4 id="tạo-security-groups">Tạo Security groups</h4>
+<p>Ở phần này chúng ta sẽ cấu hình thêm <strong>security groups</strong> cho VPC mới tạo. Một cái dùng để public port cho <strong>Application Load Balancer</strong> và mở <strong>port</strong> cho <strong>ALB</strong> kết nối tới <strong>port</strong> của các <strong>container</strong> chạy trong private subnets.</p>
+<ol>
+<li>Trong cửa sổ của VPC.
+<ul>
+<li>Nhấn chọn <strong>Security groups</strong> trong phần <strong>Security</strong> để chuyển tới màn hình security.
+<img src="/images/2-prerequiste/2.2-create-security-group/001.png" alt="Cloud Formation"></li>
+</ul>
+</li>
+<li>Trong của sổ <strong>Security groups</strong>
+<ul>
+<li>Nhấn chọn <strong>Create Sercurity group</strong>
+<img src="/images/2-prerequiste/2.2-create-security-group/002.png" alt="Cloud Formation"></li>
+</ul>
+</li>
+<li>Trong cửa sổ <strong>Create security group</strong>
+<ul>
+<li>Điền tên cho <strong>Security group</strong>, ví dụ <strong>ecs_public_port_sg</strong></li>
+<li>Điền <strong>Description</strong>, ví dụ <strong>ecs_public_port_sg</strong></li>
+<li>Lựa chọn VPC, chọn VPC vừa mới tạo, ở đây là <strong>ecs</strong></li>
+<li>Trong phần <strong>Inbound rules</strong>, chọn <strong>Type</strong> là <strong>HTTP</strong>, <strong>Source</strong> là <strong>Anywhere</strong>.</li>
+<li>Nhấn chọn <strong>Create security group</strong> để tiến hành tạo security group cho <strong>Load Balancer</strong>.
+<img src="/images/2-prerequiste/2.2-create-security-group/003.png" alt="Cloud Formation"></li>
+</ul>
+</li>
+<li>Quay lại cửa sổ <strong>Create security group</strong> để tạo security group cho container.
+<ul>
+<li>Điền tên cho <strong>Security group</strong>, ví dụ <strong>ecs_port_container_sg</strong></li>
+<li>Điền <strong>Description</strong>, ví dụ <strong>ecs_port_container_sg</strong></li>
+<li>Lựa chọn VPC, chọn VPC vừa mới tạo, ở đây là <strong>ecs</strong></li>
+<li>Trong phần <strong>Inbound rules</strong>, chọn <strong>Type</strong> là <strong>Custom TCP</strong>,<strong>Port range</strong> là <strong>8080</strong>, <strong>Source</strong> là Security group  vừa tạo.</li>
+<li>Nhấn chọn <strong>Create security group</strong> để tiến hành tạo security group cho container.
+<img src="/images/2-prerequiste/2.2-create-security-group/004.png" alt="Cloud Formation"></li>
+</ul>
+</li>
+</ol>
 
 
 
@@ -874,8 +973,42 @@
 
                     
                     
+                        
+                    
                     
 
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
+                    
+                        
+            
+            
+                
+                    
+                
+                
+
+                    
+                    
+                    
+
+                    
+            
+        
                     
             
         
@@ -918,19 +1051,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1690127207"></script>
-    <script src="/js/perfect-scrollbar.min.js?1690127207"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1690127207"></script>
-    <script src="/js/jquery.sticky.js?1690127207"></script>
-    <script src="/js/featherlight.min.js?1690127207"></script>
-    <script src="/js/highlight.pack.js?1690127207"></script>
+    <script src="/js/clipboard.min.js?1690269562"></script>
+    <script src="/js/perfect-scrollbar.min.js?1690269562"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1690269562"></script>
+    <script src="/js/jquery.sticky.js?1690269562"></script>
+    <script src="/js/featherlight.min.js?1690269562"></script>
+    <script src="/js/highlight.pack.js?1690269562"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1690127207"></script>
-    <script src="/js/learn.js?1690127207"></script>
-    <script src="/js/hugo-learn.js?1690127207"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1690269562"></script>
+    <script src="/js/learn.js?1690269562"></script>
+    <script src="/js/hugo-learn.js?1690269562"></script>
 
-    <link href="/mermaid/mermaid.css?1690127207" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1690127207"></script>
+    <link href="/mermaid/mermaid.css?1690269562" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1690269562"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

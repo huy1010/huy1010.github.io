@@ -18,15 +18,19 @@
   </url><url>
     <loc>/2-prerequiste/2.1-create-vpc/</loc>
   </url><url>
-    <loc>/5-create-alb-and-target-groups/5.1-create-alb/</loc>
+    <loc>/6-create-services/6.1-create-services/</loc>
   </url><url>
     <loc>/4-create-cluster-and-task-definition/4.1-create-cluster/</loc>
   </url><url>
+    <loc>/5-create-alb-and-target-groups/5.1-create-target-groups/</loc>
+  </url><url>
     <loc>/2-prerequiste/</loc>
   </url><url>
-    <loc>/2-prerequiste/2.2-create-security-group/</loc>
+    <loc>/6-create-services/6.2-testing/</loc>
   </url><url>
-    <loc>/5-create-alb-and-target-groups/5.2-create-target-groups/</loc>
+    <loc>/5-create-alb-and-target-groups/5.2-create-alb/</loc>
+  </url><url>
+    <loc>/2-prerequiste/2.2-create-security-group/</loc>
   </url><url>
     <loc>/4-create-cluster-and-task-definition/4.2-create-task-definition/</loc>
   </url><url>
