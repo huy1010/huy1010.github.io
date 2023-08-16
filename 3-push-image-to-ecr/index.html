@@ -12,21 +12,21 @@
     <title>Build và Push image lên ECR :: AWS ECS</title>
 
     
-    <link href="/css/nucleus.css?1691381077" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1691381077" rel="stylesheet">
-    <link href="/css/hybrid.css?1691381077" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1691381077" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1691381077" rel="stylesheet">
-    <link href="/css/auto-complete.css?1691381077" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1691381077" rel="stylesheet">
-    <link href="/css/theme.css?1691381077" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1691381077" rel="stylesheet">
+    <link href="/css/nucleus.css?1692197426" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1692197426" rel="stylesheet">
+    <link href="/css/hybrid.css?1692197426" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1692197426" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1692197426" rel="stylesheet">
+    <link href="/css/auto-complete.css?1692197426" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1692197426" rel="stylesheet">
+    <link href="/css/theme.css?1692197426" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1692197426" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1691381077" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1692197426" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1691381077"></script>
+    <script src="/js/jquery-3.3.1.min.js?1692197426"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1691381077"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1691381077"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1692197426"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1692197426"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1691381077"></script>
+<script type="text/javascript" src="/js/search.js?1692197426"></script>
 
     
   </div>
@@ -910,7 +910,7 @@
 
 
 	<h4 id="build-và-push-image-lên-elastic-container-registry">Build và Push image lên Elastic Container Registry</h4>
-<p>Trong phần này bạn sẽ clone repository từ github theo <a href="https://github.com/huy1010/nest-app-example">link sau</a>. Sau đó sử dụng <strong>docker</strong> và <strong>aws cli</strong> để <strong>build</strong> và <strong>push</strong> image lên <strong>Elasatic Container Registry (ECR)</strong>.</p>
+<p>Trong phần này bạn sẽ clone repository từ github theo <a href="https://github.com/huy1010/nest-app-example">link sau</a>. Sau đó sử dụng <strong>docker</strong> và <strong>aws cli</strong> để <strong>build</strong> và <strong>push</strong> image lên <strong>Elastic Container Registry (ECR)</strong>.</p>
 <ol>
 <li>Nhập <strong>ECR</strong> vào thanh tìm kiếm sau đó chọn <strong>Elastic Container Registry</strong>
 <img src="/images/3-push-image-to-ecr/001.png" alt="ECR"></li>
@@ -926,7 +926,7 @@
 </li>
 </ol>
 
-<div class="notices note" ><p>Để tiếp tục ở các bước tiếp theo các bạn cần phải cài đặt <strong>git</strong>, <strong>docker engine</strong>, và <strong>setup aws cli</strong> ở máy tính của mình trước.</p>
+<div class="notices note" ><p>Để tiếp tục ở các bước tiếp theo các bạn cần phải cài đặt <strong>git</strong>, <strong>docker engine</strong>, và setup <strong>aws cli</strong> ở máy tính của mình trước.</p>
 </div>
 
 <ol start="4">
@@ -945,7 +945,15 @@
 </ul>
 </li>
 <li>Lần lượt dán các câu lệnh như hình bên dưới vào cửa sổ <strong>terminal</strong> tại thư mục gốc của <strong>repository</strong> vừa mới clone để push image lên repository của <strong>ECR</strong> vừa mới tạo
+Thứ tự các câu lệnh tương đương với các nội dung sau:
+<ul>
+<li>Authenticate Docker với <strong>ECR</strong></li>
+<li>Build docker image từ Dockerfile</li>
+<li>Gắn tag image vừa build với tên của repository trên <strong>ECR</strong></li>
+<li>Push image lên <strong>ECR</strong>
 <img src="/images/3-push-image-to-ecr/005.png" alt="ECR"></li>
+</ul>
+</li>
 <li>Dưới đây là ví dụ về kết quả hiển thị trên repository của ECR khi push image thành công.
 <img src="/images/3-push-image-to-ecr/008.png" alt="ECR"></li>
 </ol>
@@ -1377,19 +1385,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1691381077"></script>
-    <script src="/js/perfect-scrollbar.min.js?1691381077"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1691381077"></script>
-    <script src="/js/jquery.sticky.js?1691381077"></script>
-    <script src="/js/featherlight.min.js?1691381077"></script>
-    <script src="/js/highlight.pack.js?1691381077"></script>
+    <script src="/js/clipboard.min.js?1692197426"></script>
+    <script src="/js/perfect-scrollbar.min.js?1692197426"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1692197426"></script>
+    <script src="/js/jquery.sticky.js?1692197426"></script>
+    <script src="/js/featherlight.min.js?1692197426"></script>
+    <script src="/js/highlight.pack.js?1692197426"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1691381077"></script>
-    <script src="/js/learn.js?1691381077"></script>
-    <script src="/js/hugo-learn.js?1691381077"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1692197426"></script>
+    <script src="/js/learn.js?1692197426"></script>
+    <script src="/js/hugo-learn.js?1692197426"></script>
 
-    <link href="/mermaid/mermaid.css?1691381077" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1691381077"></script>
+    <link href="/mermaid/mermaid.css?1692197426" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1692197426"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

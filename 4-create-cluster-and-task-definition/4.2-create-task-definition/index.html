@@ -12,21 +12,21 @@
     <title>Tạo Task Definition :: AWS ECS</title>
 
     
-    <link href="/css/nucleus.css?1691381077" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1691381077" rel="stylesheet">
-    <link href="/css/hybrid.css?1691381077" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1691381077" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1691381077" rel="stylesheet">
-    <link href="/css/auto-complete.css?1691381077" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1691381077" rel="stylesheet">
-    <link href="/css/theme.css?1691381077" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1691381077" rel="stylesheet">
+    <link href="/css/nucleus.css?1692197426" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1692197426" rel="stylesheet">
+    <link href="/css/hybrid.css?1692197426" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1692197426" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1692197426" rel="stylesheet">
+    <link href="/css/auto-complete.css?1692197426" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1692197426" rel="stylesheet">
+    <link href="/css/theme.css?1692197426" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1692197426" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1691381077" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1692197426" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1691381077"></script>
+    <script src="/js/jquery-3.3.1.min.js?1692197426"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1691381077"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1691381077"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1692197426"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1692197426"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1691381077"></script>
+<script type="text/javascript" src="/js/search.js?1692197426"></script>
 
     
   </div>
@@ -917,31 +917,31 @@
 
 	<h4 id="create-task-definition">Create Task Definition</h4>
 <ol>
-<li>Ở cửa sổ của ECS nhấn chọn task definition bên thanh menu
+<li>Ở cửa sổ của ECS nhấn chọn <strong>Task definitions</strong> bên thanh menu
 <img src="/images/4-create-cluster-and-task-definition/4.2-create-task-definition/001.png" alt="Create Task Definition"></li>
-<li>Ở cửa sổ của Task definition, nhấn chọn Create new task definition, chọn option thứ nhất
+<li>Ở cửa sổ của Task definition, nhấn chọn <strong>Create new task definition</strong>, chọn option thứ nhất
 <img src="/images/4-create-cluster-and-task-definition/4.2-create-task-definition/002.png" alt="Create Task Definition"></li>
 <li>Ở phần configure task definition and container
 <ul>
-<li>Điền tên của task definition vào Task definition family, ví dụ <code>ecs_cluster_td</code></li>
-<li>Ở phần Container, điền tên cho container tại Name, copy URI image đã push lên ECR ở bước 3 vào Image URI</li>
-<li>Container port, nhập vào 8080, giao thức là TCP</li>
+<li>Điền tên của task definition vào <strong>Task definition family</strong>, ví dụ <code>ecs_cluster_td</code></li>
+<li>Ở phần <strong>Container</strong>, điền tên cho container tại <strong>Name</strong>, copy URI image đã push lên ECR ở bước 3 vào <strong>Image URI</strong></li>
+<li><strong>Container port</strong>, nhập vào 8080, <strong>Protocol</strong> là TCP</li>
 <li>Nhấn Next để sang bước tiếp theo
 <img src="/images/4-create-cluster-and-task-definition/4.2-create-task-definition/003.png" alt="Create Task Definition"></li>
 </ul>
 </li>
 <li>Ở phần configure environment, storage, monitoring, and tags
 <ul>
-<li>App environment nhấn chọn AWS serverless</li>
-<li>Task size nhấn chọn .25vCPU, .5GB Memory để tiết kiệm chi phí</li>
-<li>Task execution role, chọn ecsTaskExecutionRole</li>
+<li><strong>App environment</strong> nhấn chọn <strong>AWS serverless</strong></li>
+<li><strong>Task size</strong> nhấn chọn .25vCPU, .5GB Memory để tiết kiệm chi phí</li>
+<li>Task execution role, chọn <strong>ecsTaskExecutionRole</strong></li>
 <li>Nhấn Next để sang bước tiếp theo
 <img src="/images/4-create-cluster-and-task-definition/4.2-create-task-definition/004.png" alt="Create Task Definition"></li>
 </ul>
 </li>
 <li>Ở phần Review and create
 <ul>
-<li>Kiểm tra lại thông tin và nhấn Create để tạo Task definition
+<li>Kiểm tra lại thông tin và nhấn <strong>Create</strong> để tạo <strong>Task definition</strong>
 <img src="/images/4-create-cluster-and-task-definition/4.2-create-task-definition/005.png" alt="Create Task Definition"></li>
 </ul>
 </li>
@@ -1380,19 +1380,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1691381077"></script>
-    <script src="/js/perfect-scrollbar.min.js?1691381077"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1691381077"></script>
-    <script src="/js/jquery.sticky.js?1691381077"></script>
-    <script src="/js/featherlight.min.js?1691381077"></script>
-    <script src="/js/highlight.pack.js?1691381077"></script>
+    <script src="/js/clipboard.min.js?1692197426"></script>
+    <script src="/js/perfect-scrollbar.min.js?1692197426"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1692197426"></script>
+    <script src="/js/jquery.sticky.js?1692197426"></script>
+    <script src="/js/featherlight.min.js?1692197426"></script>
+    <script src="/js/highlight.pack.js?1692197426"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1691381077"></script>
-    <script src="/js/learn.js?1691381077"></script>
-    <script src="/js/hugo-learn.js?1691381077"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1692197426"></script>
+    <script src="/js/learn.js?1692197426"></script>
+    <script src="/js/hugo-learn.js?1692197426"></script>
 
-    <link href="/mermaid/mermaid.css?1691381077" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1691381077"></script>
+    <link href="/mermaid/mermaid.css?1692197426" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1692197426"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>

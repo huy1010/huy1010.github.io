@@ -12,21 +12,21 @@
     <title>Tạo Cluster :: AWS ECS</title>
 
     
-    <link href="/css/nucleus.css?1691381077" rel="stylesheet">
-    <link href="/css/fontawesome-all.min.css?1691381077" rel="stylesheet">
-    <link href="/css/hybrid.css?1691381077" rel="stylesheet">
-    <link href="/css/featherlight.min.css?1691381077" rel="stylesheet">
-    <link href="/css/perfect-scrollbar.min.css?1691381077" rel="stylesheet">
-    <link href="/css/auto-complete.css?1691381077" rel="stylesheet">
-    <link href="/css/atom-one-dark-reasonable.css?1691381077" rel="stylesheet">
-    <link href="/css/theme.css?1691381077" rel="stylesheet">
-    <link href="/css/hugo-theme.css?1691381077" rel="stylesheet">
+    <link href="/css/nucleus.css?1692197426" rel="stylesheet">
+    <link href="/css/fontawesome-all.min.css?1692197426" rel="stylesheet">
+    <link href="/css/hybrid.css?1692197426" rel="stylesheet">
+    <link href="/css/featherlight.min.css?1692197426" rel="stylesheet">
+    <link href="/css/perfect-scrollbar.min.css?1692197426" rel="stylesheet">
+    <link href="/css/auto-complete.css?1692197426" rel="stylesheet">
+    <link href="/css/atom-one-dark-reasonable.css?1692197426" rel="stylesheet">
+    <link href="/css/theme.css?1692197426" rel="stylesheet">
+    <link href="/css/hugo-theme.css?1692197426" rel="stylesheet">
     
-    <link href="/css/theme-workshop.css?1691381077" rel="stylesheet">
+    <link href="/css/theme-workshop.css?1692197426" rel="stylesheet">
     
     
 
-    <script src="/js/jquery-3.3.1.min.js?1691381077"></script>
+    <script src="/js/jquery-3.3.1.min.js?1692197426"></script>
 
     <style>
       :root #header + #content > #left > #rlblock_left{
@@ -57,14 +57,14 @@
     <span data-search-clear=""><i class="fas fa-times"></i></span>
 </div>
 
-<script type="text/javascript" src="/js/lunr.min.js?1691381077"></script>
-<script type="text/javascript" src="/js/auto-complete.js?1691381077"></script>
+<script type="text/javascript" src="/js/lunr.min.js?1692197426"></script>
+<script type="text/javascript" src="/js/auto-complete.js?1692197426"></script>
 <script type="text/javascript">
     
         var baseurl = "";
     
 </script>
-<script type="text/javascript" src="/js/search.js?1691381077"></script>
+<script type="text/javascript" src="/js/search.js?1692197426"></script>
 
     
   </div>
@@ -917,23 +917,41 @@
 
 	<h4 id="tạo-cluster">Tạo Cluster</h4>
 <ol>
-<li>Nhập ECS vào thanh tìm kiếm và nhấn chọn <strong>Elastic Container Service</strong>
-<img src="/images/4-create-cluster-and-task-definition/4.1-create-cluster/001.png" alt="Create Cluster"></li>
-<li>Ở cửa sổ console của ECS nhấn chọn <strong>Create Cluster</strong> để tiến hành tạo Cluster
-<img src="/images/4-create-cluster-and-task-definition/4.1-create-cluster/002.png" alt="Create Cluster"></li>
-<li>Ở cửa sổ <strong>Create Cluster</strong> chúng ta sẽ cấu hình cluster theo các bước sau
+<li>
+<p>Nhập ECS vào thanh tìm kiếm và nhấn chọn <strong>Elastic Container Service</strong>
+<img src="/images/4-create-cluster-and-task-definition/4.1-create-cluster/001.png" alt="Create Cluster"></p>
+</li>
+<li>
+<p>Ở cửa sổ console của ECS nhấn chọn <strong>Create Cluster</strong> để tiến hành tạo Cluster
+<img src="/images/4-create-cluster-and-task-definition/4.1-create-cluster/002.png" alt="Create Cluster"></p>
+</li>
+<li>
+<p>Ở cửa sổ <strong>Create Cluster</strong> chúng ta sẽ cấu hình cluster theo các bước sau</p>
 <ul>
 <li>Điền tên cluster vào <strong>Cluster name</strong>, ví dụ <code>ecs_cluster</code></li>
 <li>Ở phần <strong>Networking</strong> chọn VPC là <strong>ecs</strong>, chọn các subnets là <strong>private subnets</strong></li>
-<li>Nhấn chọn <strong>Create</strong> để tiến hành tạo cluster.
-<img src="/images/4-create-cluster-and-task-definition/4.1-create-cluster/003.png" alt="Create Cluster">
-
-<div class="notices note" ><p>Việc chọn các subnet là <strong>private subnets</strong> là để đảm bảo các container của cluster sẽ chỉ chạy được trong nội bộ vpc, nhằm tăng tính bảo mật cho ứng dụng.</p>
-</div>
-</li>
 </ul>
 </li>
 </ol>
+<p><img src="/images/4-create-cluster-and-task-definition/4.1-create-cluster/003.png" alt="Create Cluster"></p>
+<ol start="4">
+<li>Ở phần <strong>Infrastructure</strong>, chúng ta sẽ cấu hình Auto Scaling Group để tự động tạo ra các EC2 instances và gắn vào Cluster. Các bước cấu hình như sau
+<ul>
+<li>Chọn <strong>Amazon EC2 Intances</strong></li>
+<li>Chọn <strong>Create new ASG</strong></li>
+<li>Operating System: <strong>Amazon Linux 2</strong></li>
+<li>Chọn <strong>t2.micro</strong> ở phần <strong>EC2 instance type</strong></li>
+<li>Desired capacity: Minmum là 2, Maximum là 5</li>
+<li>SSH Keypair Chọn None</li>
+<li>Nhấn chọn <strong>Create</strong> để tiến hành tạo cluster.
+<img src="/images/4-create-cluster-and-task-definition/4.1-create-cluster/infra.png" alt="Create Cluster"></li>
+</ul>
+</li>
+</ol>
+
+<div class="notices note" ><p>Việc chọn các subnet là <strong>private subnets</strong> là để đảm bảo các container của cluster sẽ chỉ chạy được trong nội bộ vpc, nhằm tăng tính bảo mật cho ứng dụng. Khi tạo Cluster với <strong>Auto Scaling Group</strong> với cấu hình như trên, thì sẽ có 2 EC2 instances được khởi chạy và gắng vào Cluster.</p>
+</div>
+
 
 
 
@@ -1363,19 +1381,19 @@
     <div style="left: -1000px; overflow: scroll; position: absolute; top: -1000px; border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;">
       <div style="border: none; box-sizing: content-box; height: 200px; margin: 0px; padding: 0px; width: 200px;"></div>
     </div>
-    <script src="/js/clipboard.min.js?1691381077"></script>
-    <script src="/js/perfect-scrollbar.min.js?1691381077"></script>
-    <script src="/js/perfect-scrollbar.jquery.min.js?1691381077"></script>
-    <script src="/js/jquery.sticky.js?1691381077"></script>
-    <script src="/js/featherlight.min.js?1691381077"></script>
-    <script src="/js/highlight.pack.js?1691381077"></script>
+    <script src="/js/clipboard.min.js?1692197426"></script>
+    <script src="/js/perfect-scrollbar.min.js?1692197426"></script>
+    <script src="/js/perfect-scrollbar.jquery.min.js?1692197426"></script>
+    <script src="/js/jquery.sticky.js?1692197426"></script>
+    <script src="/js/featherlight.min.js?1692197426"></script>
+    <script src="/js/highlight.pack.js?1692197426"></script>
     <script>hljs.initHighlightingOnLoad();</script>
-    <script src="/js/modernizr.custom-3.6.0.js?1691381077"></script>
-    <script src="/js/learn.js?1691381077"></script>
-    <script src="/js/hugo-learn.js?1691381077"></script>
+    <script src="/js/modernizr.custom-3.6.0.js?1692197426"></script>
+    <script src="/js/learn.js?1692197426"></script>
+    <script src="/js/hugo-learn.js?1692197426"></script>
 
-    <link href="/mermaid/mermaid.css?1691381077" rel="stylesheet" />
-    <script src="/mermaid/mermaid.js?1691381077"></script>
+    <link href="/mermaid/mermaid.css?1692197426" rel="stylesheet" />
+    <script src="/mermaid/mermaid.js?1692197426"></script>
     <script>
         mermaid.initialize({ startOnLoad: true });
     </script>
